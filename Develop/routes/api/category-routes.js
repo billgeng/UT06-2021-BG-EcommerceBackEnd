@@ -6,23 +6,57 @@ const { Category, Product } = require('../../models');
 router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
+  Category.findAll({
+    include:[{
+      model: Product,
+      attributes: ['id','product_name','price','stock','category_id']
+    }]
+  }) .then((CategoryPost,ProductPost) => {
+    res.json(CategoryPost,ProductPost);
+  });
 });
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
-  // be sure to include its associated Products
+   // be sure to include its associated Products
+  Category.findOne({
+    where:{
+      id: req.params.id
+    },
+    incl
+  }) .then((CategoryPost,ProductPost) => {
+    res.json(CategoryPost,ProductPost);
+  });
+ 
 });
 
 router.post('/', (req, res) => {
-  // create a new category
+  Category.Post.create({
+    where: {
+      id: req.params.id
+    }
+  }) .then(CategoryPost =>{
+    res.json(CategoryPost);
+  });
 });
 
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+  Category.Post.update({
+    where: {
+      id: req.params.id
+    }
+  }) .then(CategoryPost => {
+    res.json(CategoryPost);
+  });
 });
 
 router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
-});
+  Category.Post.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(CategoryPost =>{
+    res.json(CategoryPost);
+  });
 
 module.exports = router;
