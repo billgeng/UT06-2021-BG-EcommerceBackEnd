@@ -20,7 +20,7 @@ THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
 THEN I am able to successfully create, update, and delete data in my database
 
-The walkthrough video link : https://youtu.be/zD7MfmdJRd4
+The walkthrough video link : https://youtu.be/E062LJ_r5D4
 
 ## Table of Contents
 
@@ -41,9 +41,7 @@ Finally to connect to the server run npm start.
 
 ## Usage
 
-npm init, npm run start
-
-![alt text](./assets/images/Screenshot-proreadme.png)
+npm init, npm install , mysql -u root -p, source , npm run seed, npm run start
 
 ## Badges
 
