@@ -42,6 +42,8 @@ Finally to connect to the server run npm start.
 ## Usage
 
 npm init, npm install , mysql -u root -p, source , npm run seed, npm run start
+<img width="1707" alt="Screenshot for ecommerce back end BG" src="https://user-images.githubusercontent.com/85249402/133946313-8bb2c463-1e7b-4eaa-abad-b9aeba5a7e40.png">
+
 
 ## Badges
 
