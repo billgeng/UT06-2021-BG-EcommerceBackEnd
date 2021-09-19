@@ -33,7 +33,11 @@ The walkthrough video link : https://youtu.be/zD7MfmdJRd4
 
 ## Installation
 
-npm run start
+The user should clone the repository from GitHub.
+This application requires Node.js, Express.js, and Sequelize.
+To connect to the database run mysql -u root -p and enter password from .env file.
+Then source the schema.sql. To seed the file run npm run seed.
+Finally to connect to the server run npm start.
 
 ## Usage
 
